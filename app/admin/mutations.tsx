@@ -1,7 +1,7 @@
 import { adminLogin, adminSignup } from "@/app/api/admin";
 import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
-import { adminLoginSchema, adminSignupSchema } from "../Schemas";
+import { adminLoginSchema, adminSignupSchema } from "./Schemas";
 
 export function usePostAdminSignup() {
   return useMutation({

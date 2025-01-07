@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { usePostAdminSignup } from "./mutations";
+import { usePostAdminSignup } from "../mutations";
 import { adminSignupSchema } from "../Schemas";
 import { useRouter } from "next/navigation";
 

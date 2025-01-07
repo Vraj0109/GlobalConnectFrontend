@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { usePostAdminLogin } from "../signup/mutations";
+import { usePostAdminLogin } from "../mutations";
 import { adminLoginSchema } from "../Schemas";
 
 export default function InputForm() {
@@ -36,6 +36,9 @@ export default function InputForm() {
   async function onSubmit(data: z.infer<typeof adminLoginSchema>) {
     try {
       const res = await postAdminLogin(data);
+      toast({
+        title: "you successfully logged in ",
+      });
       localStorage.setItem("accessToken", res.token);
     } catch (error) {
       console.log(error);
