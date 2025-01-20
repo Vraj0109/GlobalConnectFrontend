@@ -18,8 +18,8 @@ export default function AssessLayout(props: Readonly<AssessLayoutProps>) {
 
   return (
     <>
-      <main className="w-full h-full text-grayscale_extended_900">
-        {children}
+      <main className="w-full h-full text-grayscale_extended_900 flex items-center justify-center">
+        <div className="">{children}</div>
       </main>
     </>
   );
