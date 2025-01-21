@@ -4,7 +4,7 @@ import { adminLoginSchema, adminSignupSchema } from "../admin/Schemas";
 
 export async function adminSignup(payload: z.infer<typeof adminSignupSchema>) {
   const handler = new ApiHandler({
-    path: "/admin/signup",
+    path: "/gcbackend/apis/v1/auth/register",
     data: payload,
   });
   const { data } = await handler.post();
@@ -12,7 +12,7 @@ export async function adminSignup(payload: z.infer<typeof adminSignupSchema>) {
 }
 export async function adminLogin(payload: z.infer<typeof adminLoginSchema>) {
   const handler = new ApiHandler({
-    path: "/admin/login",
+    path: "/gcbackend/apis/v1/auth/login",
     data: payload,
   });
   const { data } = await handler.post();
