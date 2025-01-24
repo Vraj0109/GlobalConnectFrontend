@@ -29,7 +29,7 @@ const AdminAuthPage = () => {
   );
 
   return (
-    <Card className="mt-10 !w-[500px]">
+    <Card className="mt-10 w-full">
       <RenderCardHeader />
       <CardContent className="!w-[500px]">
         <Tabs
@@ -37,7 +37,7 @@ const AdminAuthPage = () => {
           onValueChange={setActiveTab}
           className="w-full flex items-center flex-col"
         >
-          <TabsList className="grid w-full grid-cols-2 bg-muted/50">
+          <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger
               value="login"
               className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"

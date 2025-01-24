@@ -28,3 +28,27 @@ export const adminLoginSchema = z.object({
     message: "Password must at least 8 characters long",
   }),
 });
+
+export interface InstituteData {
+  location: {
+    city: string;
+    country: string;
+    pincode: string;
+    address: string;
+  };
+  _id: string;
+  name: string;
+  description: string;
+  phone: string;
+  url: string;
+  logo: string;
+  courses: {
+    instutute: string;
+    name: string;
+    price: number[];
+    noOfSemester: number;
+    language: string;
+    courseCode: string;
+    subjects: string[];
+  }[];
+}

@@ -4,6 +4,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  backface-visibility: hidden;
+  /* -webkit-font-smoothing: subpixel-antialiased !important; */
 }
 
 @layer utilities {

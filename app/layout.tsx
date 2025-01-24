@@ -3,6 +3,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import CustomProvider from "./CustomProvider";
+import { Inter } from "next/font/google";
+
+// Custom packages
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} font-int antialiased`}
       >
         <CustomProvider>{children}</CustomProvider>
         <Toaster />
