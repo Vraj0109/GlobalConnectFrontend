@@ -86,7 +86,7 @@ const InstituteCard = (props: InstituteCardProp) => {
 
   return (
     <Link
-      href={instituteData.url}
+      href={`/admin/institutes/${instituteData._id}`}
       className="col-span-12 xl:col-span-6"
       onClick={handleLinkClick}
     >
@@ -102,7 +102,7 @@ const InstituteCard = (props: InstituteCardProp) => {
         <CardHeader className="flex flex-row items-start gap-4 space-y-0">
           <div className="relative h-16 w-16 shrink-0">
             <Image
-              src={"/fefuLogo.jpg"}
+              src={instituteData?.logo || "/fefuLogo.jpg"}
               alt={`${instituteData.name} logo`}
               fill
               className={`object-contain transition-transform duration-300 ${
